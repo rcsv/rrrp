@@ -1,0 +1,30 @@
+[package]
+# "rrrp" is a "http"'s replication,
+name = "rrrp"
+description = "Really Rust's study RePlication project - a Basic http server for hosting a folder fast and simply"
+repository = "https://github.com/rcsv/rrrp"
+readme = "README.md"
+keywords = ["http", "server", "https", "file", "directory"]
+categories = ["network-programming", "web-programming::http-server"]
+license = "MIT"
+build = "build.rs"
+# Remember to also update in appveyor.yml
+version = "0.1.1"
+# Remember to also update in changelog.md
+authors = ["rcsv <rcsvpg@gmail.com>",
+           "Tomohiro AWANE <Awane.Tomohiro@gmail.com"]
+
+[dependencies]
+# この部分はまだ全然意味がわからないので後々追加していくことにする
+
+[[bin]]
+name = "rrrp"
+path = "src/main.rs"
+test = false
+doc  = false
+
+[[bin]]
+name = "rrrplz"
+path = "src/main.rs"
+test = false
+doc  = false
