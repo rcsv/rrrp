@@ -16,6 +16,40 @@ authors = ["rcsv <rcsvpg@gmail.com>",
 
 [dependencies]
 # この部分はまだ全然意味がわからないので後々追加していくことにする
+hyper-native-tls = "0.2"
+lazy_static = "0.2"
+serde_json = "0.9"
+mime_guess = "1.0"
+lazysort = "0.1"
+brotli2 = "0.3"
+unicase = "2.0"
+base64 = "0.7"
+flate2 = "0.2"
+rfsapi = "0.1"
+bzip2 = "0.3"
+ctrlc = "3.0"
+serde = "0.9"
+clap = "2.26"
+time = "0.1"
+url = "1.5"
+md6 = "2.0"
+
+[dependencies.trivial_colours]
+version = "0.3"
+default-features = false
+
+[dependencies.iron]
+version = "0.5"
+features = ["hyper-native-tls"]
+
+[target.'cfg(not(any(target_os = "windows", target_os = "macos")))'.dependencies.libc]
+version = "0.2"
+
+[build-dependencies]
+embed-resource = "1.1"
+
+[target.'cfg(not(any(target_os = "windows", target_os = "macos")))'.build-dependencies.gcc]
+version = "0.3"
 
 [[bin]]
 name = "rrrp"
